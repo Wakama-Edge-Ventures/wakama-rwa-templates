@@ -1,4 +1,5 @@
 # wakama-rwa-templates
+<<<<<<< HEAD
 
 Minimal Real-World-Asset (RWA) data toolkit for **Wakama.farm** to feed the Solana publisher + dashboard pipeline.
 
@@ -194,3 +195,6 @@ console.log('Wrote receipt', outPath);
 ---
 © 2025 Wakama Edge Ventures (Wakama.farm) — dev@wakama.farm  
 Supported by Solana Foundation
+=======
+Gabarits (SAFT/SAFTE, attestations RWA, YAML examples).
+>>>>>>> 85a268e (chore(rwa-templates): init repo + README, LICENSE, skeleton)
