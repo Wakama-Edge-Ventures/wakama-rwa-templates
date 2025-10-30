@@ -182,6 +182,15 @@ const outPath = path.join(outDir, `${Date.now()}-receipt.json`);
 fs.writeFileSync(outPath, JSON.stringify(receipt, null, 2));
 console.log('Wrote receipt', outPath);
 ```
+
+
+## 📤 How to publish a real RWA to Wakama Dashboard
+
+1. Create a JSON from the templates (sensor or coop) and put it in `templates/`.
+2. Make a local receipt from it:
+   ```bash
+   node tools/make-receipt.cjs templates/<your-file>.json
+   cp receipts/*.json ../wakama-oracle-publisher/receipts/
 ---
 © 2025 Wakama Edge Ventures (Wakama.farm) — dev@wakama.farm  
 Supported by Solana Foundation
