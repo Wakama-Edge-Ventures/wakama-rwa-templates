@@ -1,0 +1,32 @@
+{
+  "type": "wakama.sensor.batch",
+  "version": 1,
+  "source": "simulated",
+  "site": {
+    "country": "CI",
+    "zone": "raviart",
+    "field": "bouake",
+    "device": "esp32-001"
+  },
+  "ts": "2025-10-29T10:00:00.000Z",
+  "readings": [
+    {
+      "kind": "DHT22.tempC",
+      "points": [
+        { "t": 1730208000000, "v": 28.3 },
+        { "t": 1730208060000, "v": 28.5 }
+      ]
+    },
+    {
+      "kind": "Soil.moisturePct",
+      "points": [
+        { "t": 1730208000000, "v": 39.7 },
+        { "t": 1730208060000, "v": 40.1 }
+      ]
+    }
+  ],
+  "meta": {
+    "unitTime": "ms since epoch",
+    "note": "example batch for Wakama RWA"
+  }
+}

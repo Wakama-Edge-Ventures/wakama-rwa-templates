@@ -1,0 +1,17 @@
+{
+  "type": "wakama.sensor.record",
+  "version": 1,
+  "site": {
+    "country": "CI",
+    "zone": "raviart",
+    "field": "bouake",
+    "device": "esp32-001"
+  },
+  "sensor": "DHT22.tempC",
+  "ts": 1730208000000,
+  "value": 28.6,
+  "meta": {
+    "unit": "°C",
+    "source": "simulated"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "type": "wakama.coop.delivery",
+  "version": 1,
+  "source": "coop-simulated",
+  "coop": {
+    "name": "Cpp ETRA",
+    "alias": "ETRA",
+    "zone": "Bouaké",
+    "locality": "KouassiKongokro",
+    "gps": {
+      "lat": 7.495783,
+      "lon": -4.917362
+    },
+    "signature_with_wakama": "2025-04-23",
+    "superficy_ha": 400
+  },
+  "ts": "2025-04-23T11:00:00.000Z",
+  "delivery": {
+    "products": [
+      { "crop": "cassava", "estimated_yield_tons": 95 },
+      { "crop": "maize", "estimated_yield_tons": 38 },
+      { "crop": "tomato", "estimated_yield_tons": 22 }
+    ],
+    "season": "2025-main",
+    "docs": [
+      {
+        "kind": "partnership-agreement",
+        "id": "wakama-etra-2025-04-23",
+        "date": "2025-04-23"
+      }
+    ]
+  },
+  "oracle_link": {
+    "sensor_batch_hint": "sensor_batch-etra-bouake.json",
+    "expected_publisher": "wakama-oracle-publisher",
+    "devnet": true
+  },
+  "meta": {
+    "note": "First ETRA cooperative delivery registration for Wakama.farm DePIN pilot in Côte d’Ivoire.",
+    "author": "wakama-rwa-templates",
+    "unitTime": "ISO8601"
+  }
+}

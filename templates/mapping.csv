@@ -1,0 +1,5 @@
+sensor_kind,metric,description,unit,source
+DHT22.tempC,temperature,Air temperature,°C,field
+DHT22.humidity,humidity,Air relative humidity,%,field
+DS18B20.soilTempC,soil_temperature,Soil temperature,°C,field
+Soil.moisturePct,soil_moisture,Soil moisture,%,field

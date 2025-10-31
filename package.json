@@ -1,0 +1,11 @@
+{
+  "name": "wakama-rwa-templates",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gen": "node tools/gen-sensor.cjs 120 out/sensor-batch.json",
+    "make:receipt": "node tools/make-receipt.cjs out/sensor-batch.json receipts",
+    "demo": "npm run gen && npm run make:receipt"
+  }
+}

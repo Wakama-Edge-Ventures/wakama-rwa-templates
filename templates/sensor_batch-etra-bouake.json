@@ -1,0 +1,90 @@
+{
+  "type": "wakama.sensor.batch",
+  "version": 1,
+  "source": "field-simulated",
+  "site": {
+    "country": "CI",
+    "zone": "Bouaké",
+    "locality": "KouassiKongokro",
+    "coop": "ETRA",
+    "field": "ETRA-plot-01",
+    "device": "esp32-agri-001",
+    "gps": {
+      "lat": 7.495783,
+      "lon": -4.917362
+    }
+  },
+  "ts": "2025-04-23T10:15:00.000Z",
+  "crops": [
+    "cassava",
+    "maize",
+    "tomato"
+  ],
+  "superficy_ha": 400,
+  "readings": [
+    {
+      "kind": "DHT22.tempC",
+      "points": [
+        { "t": 1745399700000, "v": 29.4 },
+        { "t": 1745399760000, "v": 29.6 },
+        { "t": 1745399820000, "v": 29.8 },
+        { "t": 1745399880000, "v": 30.1 },
+        { "t": 1745399940000, "v": 30.0 },
+        { "t": 1745400000000, "v": 30.2 }
+      ]
+    },
+    {
+      "kind": "DHT22.humidityPct",
+      "points": [
+        { "t": 1745399700000, "v": 82.0 },
+        { "t": 1745399760000, "v": 80.5 },
+        { "t": 1745399820000, "v": 79.8 },
+        { "t": 1745399880000, "v": 78.9 },
+        { "t": 1745399940000, "v": 79.3 },
+        { "t": 1745400000000, "v": 80.1 }
+      ]
+    },
+    {
+      "kind": "Soil.moisturePct",
+      "points": [
+        { "t": 1745399700000, "v": 47.5 },
+        { "t": 1745399760000, "v": 47.2 },
+        { "t": 1745399820000, "v": 46.9 },
+        { "t": 1745399880000, "v": 47.0 },
+        { "t": 1745399940000, "v": 47.4 },
+        { "t": 1745400000000, "v": 47.1 }
+      ]
+    },
+    {
+      "kind": "Air.CO2ppm",
+      "points": [
+        { "t": 1745399700000, "v": 432 },
+        { "t": 1745399760000, "v": 438 },
+        { "t": 1745399820000, "v": 441 },
+        { "t": 1745399880000, "v": 435 },
+        { "t": 1745399940000, "v": 429 },
+        { "t": 1745400000000, "v": 433 }
+      ]
+    },
+    {
+      "kind": "Soil.Nitrogen.mgkg",
+      "points": [
+        { "t": 1745399700000, "v": 23.6 },
+        { "t": 1745399760000, "v": 23.5 },
+        { "t": 1745399820000, "v": 23.4 },
+        { "t": 1745399880000, "v": 23.4 },
+        { "t": 1745399940000, "v": 23.5 },
+        { "t": 1745400000000, "v": 23.6 }
+      ]
+    }
+  ],
+  "meta": {
+    "unitTime": "ms since epoch",
+    "estimatedFrom": "Bouaké average April weather (warm & humid)",
+    "signature_date_with_wakama": "2025-04-23",
+    "notes": "ETRA plots around KouassiKongokro; mixed crops cassava/maize/tomato; 400 ha declared"
+  },
+  "count": 30,
+  "ts_min": 1745399700000,
+  "ts_max": 1745400000000
+}
