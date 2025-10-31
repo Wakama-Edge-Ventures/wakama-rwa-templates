@@ -27,6 +27,90 @@ wakama-rwa-templates/
 ```
 You can create these 4 files now; they are simple but they prove the flow.
 
+
+## How to publish a real RWA to the Wakama dashboard
+
+This repo only prepares the JSON templates. To make them visible on the dashboard you must send them through the publisher.
+
+### 1. Generate or edit a template
+
+You can start from:
+
+- `templates/sensor_batch.json`
+- `templates/sensor_record.json`
+- `templates/mapping.csv`
+- or use the generator:  
+  ```bash
+  node tools/gen-coop.cjs 5
+
+This will produce 5 files in generated/coop-delivery-*.json.
+
+Each JSON must have:
+
+{
+  "type": "wakama.coop.delivery",
+  "version": 1,
+  "rwa_kind": "coop_delivery",
+  "source": "ingest",
+  ...
+}
+
+
+rwa_kind is used by the dashboard to classify rows.
+
+2. Copy your JSON to the publisher
+
+Assuming the standard local layout:
+
+~/dev/wakama/wakama-rwa-templates
+~/dev/wakama/wakama-oracle-publisher
+~/dev/wakama/wakama-dashboard
+
+
+Copy the generated files:
+
+cd ~/dev/wakama/wakama-rwa-templates
+cp generated/*.json ../wakama-oracle-publisher/ingest/
+
+3. Publish to IPFS + Solana Devnet
+
+In the publisher:
+
+cd ~/dev/wakama/wakama-oracle-publisher
+node src/publish.cjs ingest/coop-delivery-1.json
+npm run export_now
+
+
+This will:
+
+upload the JSON to Pinata (IPFS)
+
+send a memo tx on Solana devnet
+
+write a receipt in wakama-oracle-publisher/receipts/
+
+rebuild the dashboard snapshot in ../wakama-dashboard/public/now.json
+
+4. Refresh the dashboard
+
+If you run locally:
+
+cd ~/dev/wakama/wakama-dashboard
+npm run dev
+# open http://localhost:3000/now-playing
+
+
+You should see a new line like:
+
+Record type: Coop delivery
+
+Source: ingest
+
+CID: points to your Pinata gateway
+
+Tx: Solana Devnet explorer link
+
+
 📁 1. templates/sensor_record.json
 Single sensor reading, simplest possible:
 ```text
