@@ -297,4 +297,5 @@ We want this pipeline to be a real, shared tool for African and global labs that
 
 
 ---
-Wakama Edge Venture - wakama.farm - Supported by Solana Foundation 2025
+© 2025 Wakama Edge Ventures (Wakama.farm) — dev@wakama.farm  
+Supported by Solana Foundation
