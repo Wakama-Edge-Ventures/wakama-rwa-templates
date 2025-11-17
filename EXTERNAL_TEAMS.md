@@ -295,6 +295,33 @@ or contact the Wakama team using the channels shared with you (email, Telegram, 
 
 We want this pipeline to be a real, shared tool for African and global labs that work on agriculture, climate, and real world data.
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+### team-makm2 11/17/2025 Cote d'ivoire , Anyama, Abidjan
+
+- GitHub: https://github.com/makm2
+- Contact: MKE, IoT and drone technician at Palmafrique
+- Site name: Palmafrique Anyama oil palm estate
+- Country: Cote d'Ivoire
+- Zone / locality: Abidjan / Anyama
+- GPS reference: 5.389962, -4.191390
+- Approximate area: more than 400 ha of oil palm
+
+- Batch file prefix: makm2-palmafrique-1000-N.json (N = 1, 2, 3, ...)
+- Generator script: tools/gen-sensor.cjs (Palmafrique profile)
+- Main signals simulated:
+  - weather.rainfallMm
+  - soil.moisturePct
+  - oilPalm.fruitBunchCount
+  - oilPalm.canopyNdviIndex
+  - DHT22.tempC
+  - DHT22.humidityPct
+
+Notes:
+- Data are fully synthetic, inspired by typical oil palm conditions in coastal Cote d'Ivoire.
+- This team represents an external industrial partner using Wakama Oracle to explore oil palm monitoring and productivity tracking.
 
 ---
 © 2025 Wakama Edge Ventures (Wakama.farm) — dev@wakama.farm  
