@@ -1,5 +1,11 @@
 # wakama-rwa-templates
-<<<<<<< HEAD
+
+## External teams
+
+If you are an external lab or partner (university, tech lab, cooperative), please read:
+
+[EXTERNAL_TEAMS.md](./EXTERNAL_TEAMS.md)
+
 
 Minimal Real-World-Asset (RWA) data toolkit for **Wakama.farm** to feed the Solana publisher + dashboard pipeline.
 
@@ -11,7 +17,7 @@ This repo is **not** the smart contract — it is the **data side**.
 
 ---
 
-## 🧱 Structure (proposed)
+##  Structure (proposed)
 
 ```text
 wakama-rwa-templates/
@@ -111,7 +117,7 @@ CID: points to your Pinata gateway
 Tx: Solana Devnet explorer link
 
 
-📁 1. templates/sensor_record.json
+1. templates/sensor_record.json
 Single sensor reading, simplest possible:
 ```text
 
@@ -137,7 +143,7 @@ Copier le code
 ```
 This shows what a single on-field measure looks like.
 
-📁 2. templates/sensor_batch.json
+2. templates/sensor_batch.json
 Batch that is compatible with the publisher (the one qu’on vient de corriger). It matches what ton src/publish.cjs --sim génère.
 ```text
 
@@ -176,7 +182,7 @@ Copier le code
   }
 }
 ```
-📁 3. templates/mapping.csv
+3. templates/mapping.csv
 sensor_kind,metric,description,unit,source
 DHT22.tempC,temperature,Air temperature,°C,field
 DHT22.humidity,humidity,Air relative humidity,%,field
@@ -269,7 +275,7 @@ console.log('Wrote receipt', outPath);
 ```
 
 
-## 📤 How to publish a real RWA to Wakama Dashboard
+## How to publish a real RWA to Wakama Dashboard
 
 1. Create a JSON from the templates (sensor or coop) and put it in `templates/`.
 2. Make a local receipt from it:
