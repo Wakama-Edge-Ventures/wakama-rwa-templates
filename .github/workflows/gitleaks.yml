@@ -1,0 +1,35 @@
+name: Secret scan (Gitleaks)
+
+# Blocks new secrets on PRs and pushes. Scans only the new commit range so that
+# legacy history (tracked separately in the SEC-01 cleanup plan) does not fail CI.
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install gitleaks 8.28.0
+        run: |
+          curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.28.0/gitleaks_8.28.0_linux_x64.tar.gz | tar -xz gitleaks
+          sudo mv gitleaks /usr/local/bin/
+      - name: Scan new commits (redacted)
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+          PUSH_BEFORE: ${{ github.event.before }}
+          PUSH_AFTER: ${{ github.sha }}
+        run: |
+          if [ "$EVENT" = "pull_request" ]; then RANGE="$PR_BASE..$PR_HEAD"
+          elif echo "$PUSH_BEFORE" | grep -qE '^0+$'; then RANGE="$PUSH_AFTER -1"
+          else RANGE="$PUSH_BEFORE..$PUSH_AFTER"; fi
+          gitleaks detect --source . --redact --no-banner --verbose --log-opts="$RANGE"

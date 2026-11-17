@@ -1,0 +1,12 @@
+# SEC-01 — Gitleaks configuration (extends the default ruleset).
+# Allowlist is intentionally minimal; every entry must be justified.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Minimal, justified exclusions"
+paths = [
+  '''(^|/)package-lock\.json$''',   # integrity hashes trigger generic-api-key false positives
+  '''(^|/)pnpm-lock\.yaml$''',
+  '''(^|/)yarn\.lock$''',
+]
